@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+body {
+    background: #2b323c;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #2b323c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+section {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+section p {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+section h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+p > .magic {
+    animation: background-pan 2s linear infinite;
+    background: linear-gradient(
+        to right,
+
+        rgb(255, 212, 86),
+        rgb(255, 161, 133),
+        rgb(255, 94, 197),
+        rgb(255, 212, 86)
+        /* rgb(123,31,162),
+        rgb(103, 58, 183),
+        rgb(244, 143, 177),
+        rgb(123, 31, 162) */
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.magic {
+    font-weight: 700;
+}
